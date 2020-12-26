@@ -113,15 +113,15 @@ if (event.target.nodeName !== 'IMG') {
 }
 modalRef.classList.add('is-open');
 largeImgRef.src = event.target.dataset.source;
-console.log(event.target.dataset.source);
+//console.log(event.target.dataset.source);
 };
 
 function onCloseModal() {
 modalRef.classList.remove('is-open');
 };
 
-function onOverlayClick() {
+function onOverlayClick(event) {
     if (event.currentTarget === event.target) {
-      oncloseModal();
+      onCloseModal();
     };
 };
