@@ -44,6 +44,7 @@ renderListItems(galleryItems);
 
 function onOpenModal(event) {
 event.preventDefault();
+window.addEventListener('keydown', onPressEscape);
 console.log(event.target.nodeName);
 
 if (event.target.nodeName !== 'IMG') {
@@ -55,6 +56,7 @@ largeImgRef.src = event.target.dataset.source;
 };
 
 function onCloseModal() {
+window.removeEventListener('keydown', onPressEscape);
 modalRef.classList.remove('is-open');
 };
 
@@ -63,3 +65,9 @@ function onOverlayClick(event) {
       onCloseModal();
     };
 };
+function onPressEscape(event) {
+    if (event.code === 'Escape') {
+      console.log('Надо закрыть, нажали ESC');
+      onCloseModal();
+    }
+  }
