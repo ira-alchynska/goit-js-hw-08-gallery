@@ -67,7 +67,7 @@ function onOverlayClick(event) {
 };
 function onPressEscape(event) {
     if (event.code === 'Escape') {
-      console.log('Надо закрыть, нажали ESC');
+      console.log('Close, pressed ESC');
       onCloseModal();
     }
   }
