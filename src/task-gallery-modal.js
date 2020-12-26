@@ -12,7 +12,7 @@ galleryListRef.addEventListener('click', onOpenModal);
 closeBtnRef.addEventListener('click', onCloseModal);
 overlayRef.addEventListener('click', onOverlayClick);
 
-const createItem = (galleryItem, array) => {
+const createItem = (galleryItem) => {
 const itemRef = document.createElement('li');
 const linkRef = document.createElement('a');
 const imgRef = document.createElement('img');
