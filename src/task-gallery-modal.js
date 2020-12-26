@@ -67,11 +67,12 @@ const galleryListRef = document.querySelector('ul.js-gallery');
 const largeImgRef = document.querySelector('.lightbox__image');
 const modalRef = document.querySelector('.js-lightbox');
 const closeBtnRef = document.querySelector('button[data-action="close-lightbox"]', );
+ const overlayRef = document.querySelector('.lightbox__overlay');
 
 
 galleryListRef.addEventListener('click', onOpenModal);
 closeBtnRef.addEventListener('click', onCloseModal);
-
+overlayRef.addEventListener('click', onOverlayClick);
 
 const createItem = (item, array) => {
 const itemRef = document.createElement('li');
@@ -119,3 +120,8 @@ function onCloseModal() {
 modalRef.classList.remove('is-open');
 };
 
+function onOverlayClick() {
+    if (event.currentTarget === event.target) {
+      oncloseModal();
+    };
+};
