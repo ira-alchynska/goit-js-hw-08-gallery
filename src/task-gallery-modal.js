@@ -66,8 +66,8 @@ function onOverlayClick(event) {
     };
 };
 function onPressEscape(event) {
-    if (event.code === 'Escape') {
-      console.log('Надо закрыть, нажали ESC');
+    if (event.code === 'ESC') {
+      console.log('Close image, pressed ESC');
       onCloseModal();
     }
   }
